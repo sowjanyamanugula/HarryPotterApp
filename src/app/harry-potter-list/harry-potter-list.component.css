@@ -1,3 +1,38 @@
 table {
     width: 100%;
   }
+
+  .selectHouseDropdown{
+    width: 100%;
+    background-color: #6c6b6b;
+    margin-top:1%;
+    margin-left: 40%;
+    width: auto;
+  }
+.CharacterTableStyle{
+  margin-left: auto;
+    margin-right: auto;
+    width:70%;
+    margin-top: 4%;
+}
+.CharacterPaginator{
+  width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+th{
+  font-size: x-large;
+  font-family: fangsong;
+    font-weight: 900;
+}
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: rgb(160, 143, 143);
+}
+td{
+  font-size: large;
+    font-family: fangsong;
+}
+
+  

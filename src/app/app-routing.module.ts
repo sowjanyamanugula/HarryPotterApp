@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {path: '', component: HarryPotterListComponent},
-  {path: 'detail/:actor',
+  {path: 'detail/:name/:house',
           component: CharacterDetailsComponent,
           },
 ];

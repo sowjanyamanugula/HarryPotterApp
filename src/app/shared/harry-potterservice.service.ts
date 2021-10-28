@@ -15,8 +15,8 @@ export class HarryPotterserviceService {
     return this.Http.get<HarryPotter[]>(this.api);
   }
 
-  public getHouse() {
-    return this.Http.get(`${this.api}/house/slytherin`);
+  public getHouseCharacters(housename:string):Observable<HarryPotter[]> {
+    return this.Http.get<HarryPotter[]>(`${this.api}/house/${housename}`);
    
    }
 }

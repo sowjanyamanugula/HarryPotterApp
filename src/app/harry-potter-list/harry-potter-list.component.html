@@ -1,5 +1,14 @@
 <div class="wrapper">
-<table mat-table [dataSource]="HarryPotterData" class="mat-elevation-z8">
+  <mat-form-field appearance="fill" class="selectHouseDropdown">
+    <mat-label>Select House</mat-label>
+    <mat-select [(value)]="selectedValue" (valueChange)="filterByHouse(selectedValue)">
+      <mat-option></mat-option>
+      <mat-option [value]="option.value" *ngFor="let option of newhousesobj">{{ option.viewValue }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+<table mat-table [dataSource]="HarryPotterData" class="mat-elevation-z8 CharacterTableStyle">
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
@@ -25,12 +34,12 @@
     </ng-container>
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/detail', row?.actor]" (click)="navigatetoDetailsPage(row)"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/detail', row?.name,row?.house]" (click)="navigatetoDetailsPage(row)" class="example-element-row"></tr>
 
     
   </table>
 
-  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons class="CharacterPaginator"></mat-paginator>
 </div>
   
   
